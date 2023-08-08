@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <locale.h>
+int main()
+{
+    setlocale(LC_ALL, "portuguese");  // permite acentuações e Ç
+    int n1, n2, soma, sub, mult, div;
+    char conta;
+
+
+    printf("Por favor, insira um número: ");
+    scanf("%i", &n1);
+    printf("Por favor, insira o segundo número: ");
+    scanf("%i", &n2);
+    printf("Qual operação deseja realizar? \n A) SOMA \n B) SUBTRAÇÃO \n C) MULTIPLICAÇÃO \n D) DIVISÃO\n");
+    scanf(" %c", &conta);
+    conta = toupper(conta); // toupper transforma as letras caixas baixas em caixas altas
+   while (toupper(conta) > 'D'){ // enquanto os dados entrados forem maior que D irá repetir
+
+            printf("Por favor, digite um caractere valido.\n");
+
+   printf("Qual operação deseja realizar? \n A) SOMA \n B) SUBTRACAO \n C) MULTIPLICACAO \n D) DIVISAO\n");
+    scanf(" %c", &conta);
+    conta = toupper(conta);
+    }
+
+
+if (conta == 'A'){
+
+            soma = n1 + n2;
+            printf (" A soma dos valores é: %d", soma);
+        }
+else if (conta == 'B'){
+
+            sub = n1-n2;
+            printf("A subtração dos valores é : %d", sub);
+
+        }
+
+else if (conta == 'C') {
+            mult = n1*n2;
+            printf("A multiplicação dos valores é: %d", mult);
+
+        }
+else if (conta == 'D'){
+            div = n1/n2;
+            printf("A divisão dos valores é : %d", div);
+        }
+
+   }
