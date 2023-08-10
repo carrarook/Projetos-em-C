@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h>
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    printf("========\t \t \t SEQUÊNCIA DE FIBONACCI \t \t \t ========\n");
+    int tam, i, a, b, fibo;
+    printf("Por favor, indique quantos números da sequencia de fibonacci serão gerados: \n");
+    scanf("%d", &tam);
+    a = 0; b = 1;
+    fibo = a + b;
+    for (i = 0; i < tam; i++ ){
+       printf(" %d\n", fibo);
+       a = b;
+       b = fibo;
+       fibo = a + b;
+    }
+
+
+    return 0;
+}
